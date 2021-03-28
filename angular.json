@@ -39,6 +39,7 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "src/webpDetetc.js",
               "node_modules/aos/dist/aos.js",
               "node_modules/typewriter-effect/dist/core.js"
             ]

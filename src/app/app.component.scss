@@ -1,29 +1,29 @@
 .header{
+  margin-top: 20px;
   text-align: center;
   color: #333333;
-  font-size: calc(2.5rem + 3.6vw);
+  font-size: calc(2.5rem + 2.6vw);
   font-weight: bold;
-  margin-top: 40px;
-}
-.section-bg{
-  background-image: url("../assets/parallaxtop.webp");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-}
+  line-height: 100%;
 
+}
 #console{
   width: 50%;
-  height: 50%;
+  height: 30vw;
   background-color: #323233;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20px, black 0%);
   border-radius: 5px;
   color: #cccccc;
-  margin: auto;
   overflow: auto;
+  margin: auto;
+  background-size:cover
+}
+@media (max-width: 991px) and (orientation: portrait)
+{
+  #console{
+    width: 80%;
+    height: 90vw;
+  }
 }
 
 #console-input{
@@ -39,16 +39,14 @@
   border-top: 7px solid #3F51B5;
   margin-top: 0px;
   padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .line{
   background: #333333;
   height: 4px;
-  margin: 25px 0 20px 0;
-  width: 70px;
+  margin: auto;
+  margin-top: 20px;
+  width: 150px;
 }
 .skill-card{
   height: 500px;
@@ -65,5 +63,14 @@
   text-align: left;
   max-width: 400px;
   margin-top: 20px;
+  margin: 20px auto 0px auto
 }
 
+#footer{
+  margin-top: 50px;
+}
+
+.foot-link{
+  width: 250px;
+  margin: auto;
+}

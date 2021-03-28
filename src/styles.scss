@@ -2,3 +2,23 @@ body, html {
   height: 100%;
   margin: 0;
 }
+.section-bg{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/parallaxtop.png")
+}
+.webp .section-bg{
+  background-image: url("/assets/parallaxtop.webp");
+}
+
+#par-projects{
+  background-image: url('/assets/parallaxbg.png');
+  height: 300px;
+}
+.webp #par-projects{
+  background-image: url('/assets/parallaxbg.webp');
+}

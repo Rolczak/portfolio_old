@@ -40,103 +40,104 @@ declare var AOS: any;
 })
 
 export class AppComponent implements OnInit {
+  format: string = this.canUseWebP() ? "webp" : "png";
   isGalleryOpen = false;
   imageIndex = 1;
   galleryId = 1;
   isPlaying = true;
   gallery1: Image[] = [
     new Image(0, {
-      img: '../assets/projects/project-hydra-ss/desktop-tactical.webp',
+      img: '../assets/projects/project-hydra-ss/desktop-tactical.'+this.format,
     }),
     new Image(1, {
-      img: '../assets/projects/project-hydra-ss/desktop.webp',
+      img: '../assets/projects/project-hydra-ss/desktop.'+this.format,
     }),
     new Image(2, {
-      img: '../assets/projects/project-hydra-ss/mobile.webp',
+      img: '../assets/projects/project-hydra-ss/mobile.'+this.format,
     }),
     new Image(3, {
-      img: '../assets/projects/project-hydra-ss/web.webp',
+      img: '../assets/projects/project-hydra-ss/web.'+this.format,
     }),
     new Image(4, {
-      img: '../assets/projects/project-hydra-ss/web1.webp',
+      img: '../assets/projects/project-hydra-ss/web1.'+this.format,
     })
   ];
 
   gallery2: Image[] = [
     new Image(0, {
-      img: '../assets/projects/chinczyk-ss/match.webp',
+      img: '../assets/projects/chinczyk-ss/match.'+this.format,
     }),
     new Image(1, {
-      img: '../assets/projects/chinczyk-ss/menu.webp',
+      img: '../assets/projects/chinczyk-ss/menu.'+this.format,
     }),
   ];
 
   gallery3: Image[] = [
     new Image(0, {
-      img: '../assets/projects/beer-ss/beer1.webp',
+      img: '../assets/projects/beer-ss/beer1.'+this.format,
     }),
     new Image(1, {
-      img: '../assets/projects/beer-ss/beer2.webp',
+      img: '../assets/projects/beer-ss/beer2.'+this.format,
     }),
     new Image(2, {
-      img: '../assets/projects/beer-ss/beer3.webp',
+      img: '../assets/projects/beer-ss/beer3.'+this.format,
     }),
     new Image(3, {
-      img: '../assets/projects/beer-ss/beer4.webp',
+      img: '../assets/projects/beer-ss/beer4.'+this.format,
     }),
     new Image(4, {
-      img: '../assets/projects/beer-ss/beer5.webp',
+      img: '../assets/projects/beer-ss/beer5.'+this.format,
     })
   ];
 
   gallery4: Image[] = [
     new Image(0, {
-      img: '../assets/projects/domino-ss/domino1.webp',
+      img: '../assets/projects/domino-ss/domino1.'+this.format,
     }),
     new Image(1, {
-      img: '../assets/projects/domino-ss/domino2.webp',
+      img: '../assets/projects/domino-ss/domino2.'+this.format,
     }),
     new Image(2, {
-      img: '../assets/projects/domino-ss/domino3.webp',
+      img: '../assets/projects/domino-ss/domino3.'+this.format,
     }),
     new Image(3, {
-      img: '../assets/projects/domino-ss/domino4.webp',
+      img: '../assets/projects/domino-ss/domino4.'+this.format,
     }),
     new Image(4, {
-      img: '../assets/projects/domino-ss/domino5.webp',
+      img: '../assets/projects/domino-ss/domino5.'+this.format,
     }),
     new Image(5, {
-      img: '../assets/projects/domino-ss/domino6.webp',
+      img: '../assets/projects/domino-ss/domino6.'+this.format,
     })
   ];
 
   gallery5: Image[] = [
     new Image(0, {
-      img: '../assets/projects/merc-ss/merc1.webp',
+      img: '../assets/projects/merc-ss/merc1.'+this.format,
     }),
     new Image(1, {
-      img: '../assets/projects/merc-ss/merc2.webp',
+      img: '../assets/projects/merc-ss/merc2.'+this.format,
     }),
     new Image(2, {
-      img: '../assets/projects/merc-ss/merc3.webp',
+      img: '../assets/projects/merc-ss/merc3.'+this.format,
     }),
     new Image(3, {
-      img: '../assets/projects/merc-ss/merc4.webp',
+      img: '../assets/projects/merc-ss/merc4.'+this.format,
     }),
     new Image(4, {
-      img: '../assets/projects/merc-ss/merc5.webp',
+      img: '../assets/projects/merc-ss/merc5.'+this.format,
     }),
     new Image(5, {
-      img: '../assets/projects/merc-ss/merc6.webp',
+      img: '../assets/projects/merc-ss/merc6.'+this.format,
     }),
     new Image(6, {
-      img: '../assets/projects/merc-ss/merc7.webp',
+      img: '../assets/projects/merc-ss/merc7.'+this.format,
     }),
     new Image(7, {
-      img: '../assets/projects/merc-ss/merc8.webp',
+      img: '../assets/projects/merc-ss/merc8.'+this.format,
     }),
     new Image(8, {
-      img: '../assets/projects/merc-ss/merc9.webp',
+      img: '../assets/projects/merc-ss/merc9.'+this.format,
     }),
   ];
 
@@ -179,7 +180,7 @@ export class AppComponent implements OnInit {
     .typeString("<br>My goal is to write cleaner and better code everyday.")
     .typeString('<br>This is my portfolio. If you want to see my work scroll down.')
     .typeString("<br>Enjoy.")
-    .typeString("<br><span style='color:red'> This website is still in early version of development. </span> <br>")
+    .typeString("<br><span style='color:red'> This website is still in the early version of development. </span> <br>")
     .deleteChars(1)
     .typeString(" :)")
     .start();
@@ -296,39 +297,39 @@ export class AppComponent implements OnInit {
     this.projectCards.push(
       {
         title: "Project Hydra",
-        description: "Cross-platfrom app that helps management of paramilitary unit. Provides functions for administrators and users. Desktop application has built-in tactical scenario editor. Made with: Angular, ASP .NET Core, Xamarin, WPF",
-        imageName: "hydra_logo.webp",
+        description: "Cross-platform app that helps management of the paramilitary unit. Provide functions for administrators and users. Desktop application has built-in tactical scenario editor. Made with: Angular, ASP.NET Core, Xamarin, WPF.",
+        imageName: "hydra_logo."+this.format,
         repositoryLink: "https://github.com/Rolczak/PracaInz-ProjectHydra",
         secondLink: "https://github.com/Rolczak/ProjectHydraWEB",
         galleryId: 1
       },
       {
         title: "Gra u Chińczyka",
-        description: "Augmentent Reality multiplayer game for Android devices.",
-        imageName: "chinczyk_logo.webp",
+        description: "Augmented Reality multiplayer game for Android devices.",
+        imageName: "chinczyk_logo."+this.format,
         repositoryLink: "https://gitlab.com/inzynierzy/gra-u-chinczyka",
         downloadLink: "https://play.google.com/store/apps/details?id=com.MicKarDevs.Gra_u_Chinczyka",
         galleryId: 2
       },
       {
         title: "Beer App",
-        description: "Android application that helps monitor yout blood alcohol conent",
-        imageName: "beer_logo.webp",
+        description: "Android application that helps monitor yout blood alcohol content.",
+        imageName: "beer_logo."+this.format,
         repositoryLink: "https://gitlab.com/beer-time/beer-time",
         downloadLink: "https://play.google.com/store/apps/details?id=com.rol_dyn.beerapp",
         galleryId: 3
       },
       {
         title: "Restauracja u Domino",
-        description: "App for restaurant managment. Provides functions for administrators (managing), employees (reservation overview), users (making reservations), and guests (overview menu).",
-        imageName: "domino_logo.webp",
+        description: "App for restaurant management. Provide functions for administrators (managing), employees (reservation overview), users (making reservations) and guests (overview menu).",
+        imageName: "domino_logo."+this.format,
         repositoryLink: "https://gitlab.com/inzynierzy/restauracja-u-domino",
         galleryId: 4
       },
       {
         title: "Mercenaries",
-        description: "RPG browser game base made with laravel 5 MySql and Bootstrap where players can fight each others on PVP area, do contracts and campaing missions, train, buy and change equipment and many more.",
-        imageName: "merc_logo.webp",
+        description: "RPG browser game base made with Laravel 5, MySql and Bootstrap where players can fight each others on PVP area, take contracts and campaign missions, train, buy and change equipment and many more.",
+        imageName: "merc_logo."+this.format,
         repositoryLink: "https://github.com/Rolczak/Mercenaries",
         galleryId: 5
       }
@@ -341,6 +342,13 @@ export class AppComponent implements OnInit {
     this.galleryService.openGallery(id, index);
   }
 
+  canUseWebP() {
+    var elem = document.createElement('canvas');
+    if (!!(elem.getContext && elem.getContext('2d'))) {
+        return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    }
+    return false;
+}
 
 }
 
